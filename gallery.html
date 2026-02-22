@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script
+      type="text/javascript"
+      src="http://cdn.saldev.nl/js/jquery/jquery-3.1.1.min.js"
+    ></script>
+    <script type="text/javascript" src="klassenlijst.js"></script>
+    <script type="text/javascript" src="hamburger.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+    />
+
+    <link
+      rel="icon"
+      href="https://caddcentre.com/assets/images/cadd_centre_logo.svg"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+     
+    />
+    <style>
+      /* * {
+        box-sizing: border-box;
+        padding: 0%;
+        margin: 0%;
+      } */
+
+      .header {
+        background-image: url(https://th.bing.com/th?id=OIP.TkMdBQkONimKZiJFXvV1egHaEK&w=333&h=187&c=8&rs=1&qlt=90&o=6&dpr=1.4&pid=3.1&rm=2);
+        height: 150px;
+        box-shadow: 0px 2px 10px black;
+      }
+      .header nav a img {
+        margin-top: 25px;
+      }
+      #navbarSupportedContent {
+        margin-top: 78px;
+      }
+      #navbarSupportedContent ul li a {
+        font-family: Georgia, "Times New Roman", Times, serif;
+        font-size: 20px;
+        padding: 10px;
+        margin-right: 4px;
+        transition: color 0.15s, border-bottom 0.15s;
+      }
+
+      #navbarSupportedContent ul li a:hover {
+        color: red;
+        border-bottom: 2px solid red;
+      }
+      #navbarSupportedContent ul li .active {
+        color: red;
+        border-bottom: 2px solid red;
+      }
+
+      .banner {
+        width: 105%;
+        height: 500px;
+        position: fixed;
+        background-size: cover;
+        background-position: center;
+        background-image: url(cadd.png);
+        margin: 0;
+        padding: 0;
+        top: 100px;
+      }
+      .banner::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: 500px;
+        background: black;
+        opacity: 0.7;
+        z-index: -1;
+      }
+      .banner h2 {
+        font-size: 80px;
+        font-family: Georgia, "Times New Roman", Times, serif;
+        padding-top: 190px;
+        color: white;
+        letter-spacing: 8px;
+      }
+      .gallery {
+        background-color: rgb(250, 0, 0);
+        width: 100%;
+        padding: 20px;
+        top: 600px;
+        position: relative;
+        padding-bottom: none;
+      }
+      .gallery h3 {
+        font-family: Georgia, "Times New Roman", Times, serif;
+        padding: 2%;
+        color: white;
+        letter-spacing: 5px;
+        padding-top: 4%;
+      }
+      .gallery img {
+        width: 400px;
+        height: 250px;
+        border-radius: 5px;
+        -webkit-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.45);
+        -moz-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.45);
+        box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.45);
+        margin: auto;
+        margin-top: 20px;
+        display: block;
+        cursor: pointer;
+        border: 2px solid black;
+      }
+      .gallery img:hover {
+        border: 3px solid black;
+        -webkit-box-shadow: 10px 10px 15px 0px rgba(0, 0, 0, 0.45);
+        -moz-box-shadow: 10px 10px 15px 0px rgba(0, 0, 0, 0.45);
+        box-shadow: 10px 10px 15px 0px rgba(0, 0, 0, 0.45);
+        cursor: pointer;
+      }
+      .bor {
+        border: 2px solid black;
+        /* padding: 0; */
+      }
+
+      #footer {
+        background-color: white;
+        border-top: 10px solid red;
+        width: 105%;
+        padding: none;
+      }
+
+      #footer .footer-content {
+        width: 100%;
+        margin-top: 12px;
+      }
+
+      #footer .footer-content .segment {
+        width: 25%;
+        float: left;
+      }
+
+      #footer .footer-content .segment img {
+        width: 200px;
+        height: 190px;
+        border: none;
+        box-shadow: none;
+      }
+
+      #footer .footer-content .segment h2 {
+        font-family: "Times New Roman", Times, serif;
+        font-size: 22px;
+        color: red;
+        margin-bottom: 8px;
+      }
+
+      #footer .footer-content .segment a {
+        color: black;
+        font-family: Georgia, "Times New Roman", Times, serif;
+        font-size: 20px;
+        text-decoration: none;
+        transition: color 0.15s;
+        display: block;
+      }
+
+      #footer .footer-content .segment a:hover {
+        color: red;
+      }
+
+      #footer .footer-content .segment a #img1 {
+        width: 40px;
+        height: 40px;
+        border-radius: 20px;
+        margin-bottom: 10px;
+        border: none;
+        box-shadow: none;
+      }
+
+      #footer .footer-content .segment a #img2 {
+        width: 55px;
+        height: 45px;
+        border-radius: 22.5px;
+        margin-bottom: 10px;
+        border: none;
+        box-shadow: none;
+      }
+
+      #footer .footer-content .segment a #img3 {
+        width: 250px;
+        height: 70px;
+        border: none;
+        box-shadow: none;
+      }
+
+      @media screen and (max-width: 900px) {
+        #footer .footer-content .segment {
+          width: 22.5%;
+        }
+      }
+
+      @media screen and (max-width: 750px) {
+        #footer .footer-content .segment {
+          width: 100%;
+        }
+      }
+
+      #navbarSupportedContent ul li .active {
+        border-bottom: 2px solid red;
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header fixed-top">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light container">
+        <a class="navbar-brand" href="#">
+          <img
+            src="https://caddcentre.com/assets/images/cadd_centre_logo.svg"
+            alt="Error"
+            loading="lazy"
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="caddcenterhome.html">Home </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Aboutus.html">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a href="Courses.html" class="nav-link">Courses</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link active">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a href="contact.html" class="nav-link">Contact us</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="banner"><h2 class="text-center">GALLERY</h2></div>
+    <div class="gallery container-fluid">
+      <h3 class="text-center">RECEPTION</h3>
+      <div class="row">
+        <div class="col-lg-2">
+          <img src="recp1.png" alt="" />
+        </div>
+        <div class="col-lg-2"></div>
+        <div class="col-lg-2">
+          <img src="recp2.png" alt="" />
+        </div>
+        <div class="col-lg-2"></div>
+        <div class="col-lg-2">
+          <img src="recp3.png" alt="" />
+        </div>
+      </div>
+      <h3 class="text-center">TECHNICAL LABS</h3>
+      <div class="row">
+        <div class="col-lg-2">
+          <img src="tech1.png" alt="" />
+        </div>
+        <div class="col-lg-2"></div>
+        <div class="col-lg-2">
+          <img src="tech 2.png" alt="" />
+        </div>
+        <div class="col-lg-2"></div>
+        <div class="col-lg-2">
+          <img src="tech 3.png" alt="" />
+        </div>
+      </div>
+      <h3 class="text-center">PRACTICE LABS</h3>
+      <div class="row">
+        <div class="col-lg-2">
+          <img src="prac1.png" alt="" />
+        </div>
+        <div class="col-lg-2"></div>
+        <div class="col-lg-2">
+          <img src="prac2.png" alt="" />
+        </div>
+        <div class="col-lg-2"></div>
+        <div class="col-lg-2">
+          <img src="prac3.png" alt="" />
+        </div>
+      </div>
+      <h3 class="text-center">PROJECTS</h3>
+      <div class="row">
+        <div class="col-lg-2">
+          <img src="proc1.png" alt="" />
+        </div>
+        <div class="col-lg-2"></div>
+        <div class="col-lg-2">
+          <img src="proc2.png" alt="" />
+        </div>
+        <div class="col-lg-2"></div>
+        <div class="col-lg-2">
+          <img src="proc3.png" alt="" />
+        </div>
+      </div>
+      <h3 class="text-center">PROGRAMMES</h3>
+      <div class="row">
+        <div class="col-lg-2">
+          <img src="awar1.png" alt="" />
+        </div>
+        <div class="col-lg-2"></div>
+        <div class="col-lg-2">
+          <img src="awar2.png" alt="" />
+        </div>
+        <div class="col-lg-2"></div>
+        <div class="col-lg-2">
+          <img src="awar3.png" alt="" />
+        </div>
+      </div>
+
+      <br /><br />
+      <div id="footer" class="row">
+        <br /><br />
+        <div class="footer-content">
+          <div class="segment">
+            <center>
+              <img
+                src="https://caddcentre.com/assets/images/cadd_centre_logo.svg"
+                alt=""
+              />
+            </center>
+          </div>
+          <div class="segment">
+            <center><h2>Quick links</h2></center>
+
+            <center>
+              <a href="">Home</a>
+
+              <a href="">About Us</a>
+
+              <a href="">Courses</a>
+
+              <a href="">Gallery</a>
+            </center>
+          </div>
+          <div class="segment">
+            <center>
+              <h2>Contact Us</h2>
+
+              <a
+                href="mailto:santhimarappan@gmail.com"
+                target="_blank"
+                style="display: inline; margin-right: 8px"
+                ><img
+                  src="https://th.bing.com/th/id/OIP.khT6zLB_Tf7J3ojLpX_GyAHaHa?w=186&h=186&c=7&r=0&o=5&dpr=1.4&pid=1.7"
+                  alt=""
+                  id="img1"
+              /></a>
+
+              <a
+                href="https://wa.me/19500126141"
+                target="_blank"
+                style="display: inline"
+              >
+                <img
+                  src="https://th.bing.com/th/id/OIP.VKMedD_riSyt-mwW1jooHgHaGE?w=253&h=207&c=7&r=0&o=5&dpr=1.4&pid=1.7"
+                  alt=""
+                  id="img2"
+                />
+              </a>
+            </center>
+          </div>
+          <div class="segment">
+            <center>
+              <a
+                href="https://play.google.com/store/apps/details?id=com.caddcentre.lms"
+                ><img
+                  src="https://th.bing.com/th/id/OIP.EbZmoKK49Eai9NUp6JMJvwHaB2?w=338&h=87&c=7&r=0&o=5&dpr=1.4&pid=1.7"
+                  alt=""
+                  id="img3"
+              /></a>
+              <br />
+              <br />
+              <h2 style="margin-right: 50px">Phn no-</h2>
+
+              <p>+91 95001 26141</p>
+            </center>
+          </div>
+        </div>
+      </div>
+
+      <center>
+        <p
+          style="
+            color: white;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 22px;
+            background-color: red;
+            text-align: center;
+            height: 25px;
+            padding: 12px;
+          "
+        >
+          Our Main website-
+          <a href="https://caddcentre.com/" style="text-align: center"
+            >https://caddcentre.com/</a
+          >
+        </p>
+      </center>
+    </div>
+  </body>
+</html>

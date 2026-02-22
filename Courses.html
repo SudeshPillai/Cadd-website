@@ -1,0 +1,1036 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Courses</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+    />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <script
+      type="text/javascript"
+      src="http://cdn.saldev.nl/js/jquery/jquery-3.1.1.min.js"
+    ></script>
+    <script type="text/javascript" src="klassenlijst.js"></script>
+    <script type="text/javascript" src="hamburger.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+        padding: 0%;
+        margin: 0%;
+      }
+
+      .header {
+        background-image: url(https://th.bing.com/th?id=OIP.TkMdBQkONimKZiJFXvV1egHaEK&w=333&h=187&c=8&rs=1&qlt=90&o=6&dpr=1.4&pid=3.1&rm=2);
+        height: 150px;
+        box-shadow: 0px 2px 10px black;
+        position: sticky;
+        top: 0%;
+      }
+      .header nav a img {
+        margin-top: 25px;
+      }
+      #navbarSupportedContent {
+        margin-top: 78px;
+      }
+      #navbarSupportedContent ul li a {
+        font-family: Georgia, "Times New Roman", Times, serif;
+        font-size: 20px;
+        padding: 10px;
+        margin-right: 4px;
+        transition: color 0.15s, border-bottom 0.15s;
+      }
+
+      #navbarSupportedContent ul li a:hover {
+        color: red;
+        border-bottom: 2px solid red;
+      }
+
+      #footer {
+        background-color: white;
+        border-top: 10px solid red;
+        width: 100%;
+      }
+
+      #footer .footer-content {
+        width: 100%;
+        margin-top: 12px;
+      }
+
+      #footer .footer-content .segment {
+        width: 25%;
+        float: left;
+      }
+
+      #footer .footer-content .segment img {
+        width: 200px;
+        height: 190px;
+      }
+
+      #footer .footer-content .segment h2 {
+        font-family: "Times New Roman", Times, serif;
+        font-size: 22px;
+        color: red;
+        margin-bottom: 8px;
+      }
+
+      #footer .footer-content .segment a {
+        color: black;
+        font-family: Georgia, "Times New Roman", Times, serif;
+        font-size: 20px;
+        text-decoration: none;
+        transition: color 0.15s;
+        display: block;
+      }
+
+      #footer .footer-content .segment a:hover {
+        color: red;
+      }
+
+      #footer .footer-content .segment a .img1 {
+        width: 40px;
+        height: 40px;
+        border-radius: 20px;
+        margin-bottom: 10px;
+      }
+
+      #footer .footer-content .segment a .img2 {
+        width: 55px;
+        height: 45px;
+        border-radius: 22.5px;
+        margin-bottom: 10px;
+      }
+
+      #footer .footer-content .segment a .img3 {
+        width: 250px;
+        height: 70px;
+      }
+
+      @media screen and (max-width: 900px) {
+        #footer .footer-content .segment {
+          width: 22.5%;
+        }
+      }
+
+      @media screen and (max-width: 750px) {
+        #footer .footer-content .segment {
+          width: 100%;
+        }
+      }
+
+      .demcl {
+        background-color: red;
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+
+      .demo {
+        /*padding-left: 250px;
+        padding-right: 250px;*/
+        padding-top: 10px;
+        font-size: 24px;
+        font-family: Georgia, "Times New Roman", Times, serif;
+        color: white;
+      }
+
+      .btn {
+        color: red;
+        background-color: white;
+        border-color: rgb(240, 180, 180);
+        border-width: 5px;
+        font-size: 24px;
+        font-family: Georgia, "Times New Roman", Times, serif;
+        position: static;
+      }
+      .btn:hover {
+        border-color: white;
+        color: white;
+        background-color: red;
+        border-width: 5px;
+      }
+      #row1 {
+        width: 100%;
+        position: static;
+      }
+      #row1 .cbox {
+        width: 25%;
+      }
+
+      #row1 .cbox .card {
+        width: 300px;
+        height: 380px;
+        border: 2px solid red;
+        position: static;
+      }
+
+      #row1 .cbox .card img {
+        width: 297px;
+        height: 120px;
+        border-bottom: 2px solid red;
+      }
+
+      /* #row1 .cbox .card img:hover {
+        padding: 5px;
+      } */
+
+      #row1 .cbox .card .card-body .course-heading {
+        font-family: Georgia, "Times New Roman", Times, serif;
+        font-size: 18px;
+        font-weight: bold;
+      }
+
+      @media screen and (max-width: 1240px) {
+        #row1 .cbox {
+          width: 50%;
+          margin-bottom: 10px;
+        }
+      }
+      @media screen and (max-width: 647px) {
+        #row1 .cbox {
+          width: 100%;
+          margin-bottom: 10px;
+        }
+      }
+
+      .card:hover {
+        background-color: lightgray;
+      }
+
+      #Booknowform {
+        width: 100%;
+        display: none;
+        border: 2px solid red;
+        background-color: red;
+      }
+
+      #Booknowform form {
+        width: 400px;
+      }
+
+      #Booknowform h2 {
+        color: white;
+        font-family: Georgia, "Times New Roman", Times, serif;
+        font-size: 18px;
+        font-weight: bold;
+      }
+
+      #Booknowform input {
+        transition: border 0.15s;
+      }
+
+      ::placeholder {
+        color: red;
+        padding: 20px;
+        font-family: Georgia, "Times New Roman", Times, serif;
+        font-size: 18px;
+      }
+
+      #Booknowform input:hover {
+        border: 5px solid rgb(240, 180, 180);
+      }
+
+      #Booknowform form label {
+        color: white;
+        font-family: Georgia, "Times New Roman", Times, serif;
+        font-size: 18px;
+      }
+
+      #Booknowform form select {
+        padding: 6px;
+        border: red;
+        border-radius: 5px;
+      }
+
+      #Booknowform form button {
+        color: white;
+        font-family: Georgia, "Times New Roman", Times, serif;
+        font-size: 16px;
+        padding: 6px;
+        background-color: red;
+        border-radius: 8px;
+        border: 1px solid white;
+        transition: background-color 0.15s, color 0.15s, border 0.15s,
+          opacity 0.15s;
+        margin-right: 20px;
+      }
+
+      #Booknowform form button:hover {
+        background-color: white;
+        border: none;
+        color: red;
+      }
+
+      #Booknowform form button:active {
+        opacity: 0.3;
+      }
+
+      .header nav #navbarSupportedContent ul li .active {
+        border-bottom: 2px solid red;
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light container">
+        <a class="navbar-brand" href="#">
+          <img
+            src="https://caddcentre.com/assets/images/cadd_centre_logo.svg"
+            alt="Error"
+            loading="lazy"
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="caddcenterhome.html">Home </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Aboutus.html">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link active">Courses</a>
+            </li>
+            <li class="nav-item">
+              <a href="gallery.html" class="nav-link">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a href="contact.html" class="nav-link">Contact us</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <div class="row demcl">
+      <p class="col-xl-7 col-lg-7 col-md-4 col-sm-0"></p>
+      <p class="col-xl-2 col-lg-2 col-md-3 demo col-sm-6">Book a Demo Class</p>
+      <button
+        class="col-xl-2 col-lg-2 col-md-3 col-sm-5 btn"
+        onclick="showform()"
+      >
+        Book Now!
+      </button>
+      <p class="col-xl-1 col-lg-1 col-md-2 col-sm-1"></p>
+    </div>
+
+    <br />
+    <center>
+      <div id="Booknowform">
+        <center>
+          <br />
+
+          <h2>Book Demo class at Cadd Center</h2>
+
+          <br />
+          <form action="" onsubmit="return validator()">
+            <input
+              type="text"
+              placeholder="Name"
+              required
+              class="form-group form-control"
+              name="student-name"
+            />
+            <label for="" id="name" class="text-primary"></label>
+            <input
+              type="tel"
+              placeholder="Mobile Number"
+              required
+              class="form-control form-group"
+              name="student-mobile-number"
+            />
+            <label for="" id="mobile-number" class="text-primary"></label>
+            <input
+              type="email"
+              placeholder="Email Address"
+              required
+              class="form-control form-group"
+              name="student-email-address"
+            />
+            <label for="" id="email" class="text-primary"></label>
+            <input
+              type="text"
+              placeholder="location"
+              required
+              class="form-group form-control"
+              name="student-location"
+            />
+            <label for="" id="location" class="text-primary"></label>
+
+            <label for="">Mode:</label>
+            <label for=""
+              ><input type="radio" name="mode" value="Online" />Online</label
+            >
+            <label for=""
+              ><input type="radio" name="mode" value="Offline" />Offline</label
+            >
+            <label for="" id="mode" class="text-primary"></label>
+
+            <br />
+
+            <label for="">Select Course</label>
+            <select name="Course" id="" required>
+              <option value="Essential in python">Essential in python</option>
+              <option value="Internet of things (IoT)">
+                Internet of things (IoT)
+              </option>
+              <option value="Ethical hacking">Ethical hacking</option>
+              <option value="C Programming">C Programming</option>
+              <option value="C++ Programming">C++ Programming</option>
+              <option value="Java Programming">Java Programming</option>
+              <option value="Robotic Design">Robotic Design</option>
+              <option value="Python for Professionals">
+                Python for Professionals
+              </option>
+              <option value="AutoCAD 3D">AutoCAD 3D</option>
+              <option value="CATIA Kinematics">CATIA Kinematics</option>
+              <option value="Hypermeh">Hypermeh</option>
+              <option value="Autodesk Inventor">Autodesk Inventor</option>
+              <option value="Expert Certificate in Product design">
+                Expert Certificate in Product design
+              </option>
+              <option value="Expert Certificate in Interior design">
+                Expert Certificate in Interior design
+              </option>
+              <option value="Master Certificate in MEP Design">
+                Master Certificate in MEP Design
+              </option>
+              <option value="Master Certificate in Building Design">
+                Master Certificate in Building Design
+              </option>
+            </select>
+            <label for="" id="Course" class="text-primary"></label>
+
+            <br /><br />
+
+            <button type="submit">Book Now</button>
+            <button type="reset">Reset</button>
+
+            <br /><br />
+          </form>
+        </center>
+      </div>
+    </center>
+
+    <center>
+      <h1
+        style="
+          font-family: 'Times New Roman', Times, serif;
+          font-size: 28px;
+          letter-spacing: 8px;
+          color: red;
+          font-style: normal;
+          font-weight: bold;
+          margin-bottom: 10px;
+        "
+      >
+        COURSES
+        <hr />
+      </h1>
+    </center>
+
+    <center>
+      <h1
+        style="
+          font-family: 'Times New Roman', Times, serif;
+          font-size: 28px;
+          letter-spacing: 8px;
+          color: red;
+          font-style: normal;
+          margin-bottom: 10px;
+        "
+      >
+        IT COURSES
+      </h1>
+    </center>
+
+    <div class="container-fluid">
+      <div class="row" id="row1">
+        <div class="cbox" id="">
+          <center>
+            <div class="card">
+              <img
+                src="https://spectrum.ieee.org/media-library/the-python-logo-on-top-of-imagery-representing-dna-sequencing-or-other-data.jpg?id=33364099&width=980"
+                alt=""
+              />
+
+              <div class="card-body">
+                <p class="course-heading">Essential in python <br /></p>
+
+                <p style="color: red">
+                  Project based assessment | <br />
+                  World-class coursewre | industry recognised certificate
+                  <br />| Placement Support |
+                </p>
+              </div>
+            </div>
+          </center>
+        </div>
+        <div class="cbox">
+          <center>
+            <div class="card">
+              <img
+                src="https://hexaware.com/wp-content/uploads/2022/01/empower-your-iot-ecosystem-with-smart-data.jpg"
+                alt=""
+              />
+
+              <div class="card-body">
+                <p class="course-heading">
+                  Internet Of Things <br />
+                  (IoT)
+                </p>
+
+                <p style="color: red">
+                  Project based assessment | <br />
+                  World-class coursewre | industry recognised certificate
+                  <br />| Placement Support |
+                </p>
+              </div>
+            </div>
+          </center>
+        </div>
+        <div class="cbox">
+          <center>
+            <div class="card">
+              <img
+                src="https://www.simplilearn.com/ice9/free_resources_article_thumb/ethical-hackers-for-businesses-article.jpg"
+                alt=""
+              />
+
+              <div class="card-body">
+                <p class="course-heading">Ethical Hacking <br /></p>
+
+                <p style="color: red">
+                  Project based assessment | <br />
+                  World-class coursewre | industry recognised certificate
+                  <br />| Placement Support |
+                </p>
+              </div>
+            </div>
+          </center>
+        </div>
+        <div class="cbox">
+          <center>
+            <div class="card">
+              <img
+                src="https://1.bp.blogspot.com/-KnGVLo7U7gQ/Xx0E8Sh8KtI/AAAAAAAAhnE/THS8q3fq9zg3jWTQqFr2s0XuE_M4BABNQCLcBGAsYHQ/w1200-h630-p-k-no-nu/free%2BC%2BProgramming%2Bcourses%2Bfor%2Bbeginners.png"
+                alt=""
+              />
+
+              <div class="card-body">
+                <p class="course-heading">C Programming<br /></p>
+
+                <p style="color: red">
+                  Project based assessment | <br />
+                  World-class coursewre | industry recognised certificate
+                  <br />| Placement Support |
+                </p>
+              </div>
+            </div>
+          </center>
+        </div>
+      </div>
+
+      <br />
+
+      <div class="row" id="row1">
+        <div class="cbox" id="">
+          <center>
+            <div class="card">
+              <img
+                src="https://bs-uploads.toptal.io/blackfish-uploads/components/blog_post_page/content/cover_image_file/cover_image/1289560/regular_1708x683_cover-0828_AfterAllTheseYearstheWorldisStillPoweredbyCProgramming_Razvan_Newsletter-2b9ea38294bb08c5aea1f0c1cb06732f.png"
+                alt=""
+              />
+
+              <div class="card-body">
+                <p class="course-heading">C++ Programming <br /></p>
+
+                <p style="color: red">
+                  Project based assessment | <br />
+                  World-class coursewre | industry recognised certificate
+                  <br />| Placement Support |
+                </p>
+              </div>
+            </div>
+          </center>
+        </div>
+        <div class="cbox">
+          <center>
+            <div class="card">
+              <img
+                src="https://contentstatic.techgig.com/photo/93000110/what-makes-java-still-popular-among-developers.jpg?28608"
+                alt=""
+              />
+
+              <div class="card-body">
+                <p class="course-heading">JAVA Programming <br /></p>
+
+                <p style="color: red">
+                  Project based assessment | <br />
+                  World-class coursewre | industry recognised certificate
+                  <br />| Placement Support |
+                </p>
+              </div>
+            </div>
+          </center>
+        </div>
+        <div class="cbox">
+          <center>
+            <div class="card">
+              <img
+                src="https://www.abb-conversations.com/wp-content/uploads/2014/02/IRB6700ID-black-background_750px.jpg"
+                alt=""
+              />
+
+              <div class="card-body">
+                <p class="course-heading">Robotic Design<br /></p>
+
+                <p style="color: red">
+                  Project based assessment | <br />
+                  World-class coursewre | industry recognised certificate
+                  <br />| Placement Support |
+                </p>
+              </div>
+            </div>
+          </center>
+        </div>
+        <div class="cbox">
+          <center>
+            <div class="card">
+              <img
+                src="https://marketing.caddcentre.com/uploads/thumbnails/1680000128_prf-thumb.jpg"
+                alt=""
+              />
+
+              <div class="card-body">
+                <p class="course-heading">Python for Professionals <br /></p>
+
+                <p style="color: red">
+                  Project based assessment | <br />
+                  World-class coursewre | industry recognised certificate
+                  <br />| Placement Support |
+                </p>
+              </div>
+            </div>
+          </center>
+        </div>
+      </div>
+    </div>
+
+    <br /><br />
+    <hr />
+    <br /><br />
+
+    <center>
+      <h1
+        style="
+          font-family: 'Times New Roman', Times, serif;
+          font-size: 28px;
+          letter-spacing: 8px;
+          color: red;
+          font-style: normal;
+          margin-bottom: 10px;
+        "
+      >
+        HYBRID COURSES
+      </h1>
+    </center>
+
+    <div class="container-fluid">
+      <div class="row" id="row1">
+        <div class="cbox" id="">
+          <center>
+            <div class="card">
+              <img
+                src="https://1000logos.net/wp-content/uploads/2020/03/AutoCAD-Logo-2009.jpg"
+                alt=""
+              />
+
+              <div class="card-body">
+                <p class="course-heading">AutoCAD 3D<br /></p>
+
+                <p style="color: red">
+                  Project based assessment | <br />
+                  World-class coursewre | industry recognised certificate
+                  <br />| Placement Support |
+                </p>
+              </div>
+            </div>
+          </center>
+        </div>
+        <div class="cbox">
+          <center>
+            <div class="card">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/8/8a/Logo_CATIA.jpg"
+                alt=""
+              />
+
+              <div class="card-body">
+                <p class="course-heading">CATIA Kinematics <br /></p>
+
+                <p style="color: red">
+                  Project based assessment | <br />
+                  World-class coursewre | industry recognised certificate
+                  <br />| Placement Support |
+                </p>
+              </div>
+            </div>
+          </center>
+        </div>
+        <div class="cbox">
+          <center>
+            <div class="card">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzWRrqX_QOr657TdM4mfSfg6TlkpiHGSm8zrZwR1tCTJh9-sOdEEWGhcppaU3vDCGKdxQ"
+                alt=""
+              />
+
+              <div class="card-body">
+                <p class="course-heading">Hypermesh <br /></p>
+
+                <p style="color: red">
+                  Project based assessment | <br />
+                  World-class coursewre | industry recognised certificate
+                  <br />| Placement Support |
+                </p>
+              </div>
+            </div>
+          </center>
+        </div>
+        <div class="cbox">
+          <center>
+            <div class="card">
+              <img
+                src="https://yourengineer.in/wp-content/uploads/2021/07/autodesk-inventor-logo.png"
+                alt=""
+              />
+
+              <div class="card-body">
+                <p class="course-heading">Autodesk Inventor<br /></p>
+
+                <p style="color: red">
+                  Project based assessment | <br />
+                  World-class coursewre | industry recognised certificate
+                  <br />| Placement Support |
+                </p>
+              </div>
+            </div>
+          </center>
+        </div>
+      </div>
+    </div>
+
+    <br /><br />
+    <hr />
+    <br /><br />
+
+    <center>
+      <h1
+        style="
+          font-family: 'Times New Roman', Times, serif;
+          font-size: 28px;
+          letter-spacing: 8px;
+          color: red;
+          font-style: normal;
+          margin-bottom: 10px;
+        "
+      >
+        DESIGNING COURSES
+      </h1>
+    </center>
+
+    <div class="container-fluid">
+      <div class="row" id="row1">
+        <div class="cbox" id="">
+          <center>
+            <div class="card">
+              <img
+                src="https://th.bing.com/th/id/OIP.Ie9AA9XecgsHuYAyMnzKlgHaE7?w=257&h=180&c=7&r=0&o=5&dpr=1.4&pid=1.7"
+                alt=""
+              />
+
+              <div class="card-body">
+                <p class="course-heading">
+                  Expert Certificate in<br />
+                  Product design
+                </p>
+
+                <p style="color: red">
+                  Project based assessment | <br />
+                  World-class coursewre | industry recognised certificate
+                  <br />| Placement Support |
+                </p>
+              </div>
+            </div>
+          </center>
+        </div>
+        <div class="cbox">
+          <center>
+            <div class="card">
+              <img
+                src="https://th.bing.com/th/id/OIP.hSH1QmBMyhBq9eTbL1JG-QHaE8?w=248&h=180&c=7&r=0&o=5&dpr=1.4&pid=1.7"
+                alt=""
+              />
+
+              <div class="card-body">
+                <p class="course-heading">
+                  Expert Certificate in<br />
+                  Interior design
+                </p>
+
+                <p style="color: red">
+                  Project based assessment | <br />
+                  World-class coursewre | industry recognised certificate
+                  <br />| Placement Support |
+                </p>
+              </div>
+            </div>
+          </center>
+        </div>
+        <div class="cbox">
+          <center>
+            <div class="card">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8R_HZGHA03BH6Nx8Z2FqTcu_p7gTy3fg04v64QEBVLvRsw_GyIZBJ_qoOKiOm9N8OIaU"
+                alt=""
+              />
+
+              <div class="card-body">
+                <p class="course-heading">
+                  Master Certificate in <br />
+                  MEP Design
+                </p>
+
+                <p style="color: red">
+                  Project based assessment | <br />
+                  World-class coursewre | industry recognised certificate
+                  <br />| Placement Support |
+                </p>
+              </div>
+            </div>
+          </center>
+        </div>
+        <div class="cbox">
+          <center>
+            <div class="card">
+              <img
+                src="https://marketing.caddcentre.com/uploads/thumbnails/1679554080_Expert-Certificate-in-Architectural-Design.jpg"
+                alt=""
+              />
+
+              <div class="card-body">
+                <p class="course-heading">
+                  Master Certificate in <br />
+                  Building design
+                </p>
+
+                <p style="color: red">
+                  Project based assessment | <br />
+                  World-class coursewre | industry recognised certificate
+                  <br />| Placement Support |
+                </p>
+              </div>
+            </div>
+          </center>
+        </div>
+      </div>
+    </div>
+
+    <br />
+    <section style="position: static">
+      <marquee
+        behavior=""
+        scrollamount="10"
+        direction="left"
+        style="margin: 0"
+        style="position: static"
+      >
+        <p
+          style="
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 22px;
+            color: red;
+          "
+        >
+          To pursue courses that are not listed here.Please contact us.Our team
+          will do the needfull
+        </p>
+      </marquee>
+    </section>
+
+    <br />
+
+    <div id="footer" class="row">
+      <br /><br />
+      <div class="footer-content">
+        <div class="segment">
+          <center>
+            <img
+              src="https://caddcentre.com/assets/images/cadd_centre_logo.svg"
+              alt=""
+            />
+          </center>
+        </div>
+        <div class="segment">
+          <center><h2>Quick links</h2></center>
+
+          <center>
+            <a href="">Home</a>
+
+            <a href="">About Us</a>
+
+            <a href="">Courses</a>
+
+            <a href="">Gallery</a>
+          </center>
+        </div>
+        <div class="segment">
+          <center>
+            <h2>Contact Us</h2>
+
+            <a
+              href="mailto:santhimarappan@gmail.com"
+              target="_blank"
+              style="display: inline; margin-right: 8px"
+              ><img
+                src="https://th.bing.com/th/id/OIP.khT6zLB_Tf7J3ojLpX_GyAHaHa?w=186&h=186&c=7&r=0&o=5&dpr=1.4&pid=1.7"
+                alt=""
+                class="img1"
+            /></a>
+
+            <a
+              href="https://wa.me/19500126141"
+              target="_blank"
+              style="display: inline"
+            >
+              <img
+                src="https://th.bing.com/th/id/OIP.VKMedD_riSyt-mwW1jooHgHaGE?w=253&h=207&c=7&r=0&o=5&dpr=1.4&pid=1.7"
+                alt=""
+                class="img2"
+              />
+            </a>
+          </center>
+        </div>
+        <div class="segment">
+          <center>
+            <a
+              href="https://play.google.com/store/apps/details?id=com.caddcentre.lms"
+              ><img
+                src="https://th.bing.com/th/id/OIP.EbZmoKK49Eai9NUp6JMJvwHaB2?w=338&h=87&c=7&r=0&o=5&dpr=1.4&pid=1.7"
+                alt=""
+                class="img3"
+            /></a>
+            <br />
+            <br />
+            <h2 style="margin-right: 50px">Phn no-</h2>
+
+            <p>+91 95001 26141</p>
+          </center>
+        </div>
+      </div>
+    </div>
+
+    <center>
+      <p
+        style="
+          color: white;
+          font-family: 'Times New Roman', Times, serif;
+          font-size: 22px;
+          background-color: red;
+          text-align: center;
+          height: 60px;
+          padding: 12px;
+        "
+      >
+        Our Main website-
+        <a href="https://caddcentre.com/" style="text-align: center"
+          >https://caddcentre.com/</a
+        >
+      </p>
+    </center>
+
+    <script>
+      function showform() {
+        document.getElementById("Booknowform").style.display = "block";
+      }
+
+      // function validator() {
+      //   var student_name = document.getElementsByName("student-name").value;
+      //   var student_mobile_number = document.getElementsByName(
+      //     "student-mobile-number"
+      //   ).value;
+      //   var student_Course = document.getElementByName("Course").value;
+      //   var student_email_address = document.getElementByName(
+      //     "student-email-address"
+      //   ).value;
+      //   var student_location =
+      //     document.getElementByName("student-location").value;
+      //   var mode = document.getElementByName("mode").value;
+
+      //   console.log(student_name);
+      //   console.log(student_mobile_number);
+      //   console.log(student_Course);
+      //   console.log(student_email_address);
+      //   console.log(student_location);
+      //   console.log(mode);
+
+      //   if (
+      //     student_name == "" ||
+      //     student_mobile - number == "" ||
+      //     student_email - address == "" ||
+      //     student_location == "" ||
+      //     mode == "" ||
+      //     student_Course == ""
+      //   ) {
+      //     document.getElementById("name").innerHTML = "This field is mandatory";
+      //     return;
+      //     document.getElementById("mobile-number").innerHTML =
+      //       "This field is mandatory";
+      //     return;
+      //     document.getElementById("email").innerHTML =
+      //       "This field is mandatory";
+      //     return;
+      //     document.getElementById("location").innerHTML =
+      //       "This field is mandatory";
+      //     return;
+      //     document.getElementById("mode").innerHTML = "This field is mandatory";
+      //     return;
+      //     document.getElementById("Course").innerHTML =
+      //       "This field is mandatory";
+      //     return;
+      //   }
+      // }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CADD CENTER-THIRUVANMIYUR</title>
+
+    <link rel="icon"
+    href="https://caddcentre.com/assets/images/cadd_centre_logo.sv />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+    />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <script
+      type="text/javascript"
+      src="http://cdn.saldev.nl/js/jquery/jquery-3.1.1.min.js"
+    ></script>
+    <script type="text/javascript" src="klassenlijst.js"></script>
+    <script type="text/javascript" src="hamburger.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+        padding: 0%;
+        margin: 0%;
+      }
+
+      /* header-start */
+
+      #mhead {
+        background-image: url(https://th.bing.com/th?id=OIP.TkMdBQkONimKZiJFXvV1egHaEK&w=333&h=187&c=8&rs=1&qlt=90&o=6&dpr=1.4&pid=3.1&rm=2);
+        height: 150px;
+        width: 100%;
+        padding: 0%;
+        position: sticky;
+        top: 0%;
+      }
+
+      .header {
+        background-image: url(https://th.bing.com/th?id=OIP.TkMdBQkONimKZiJFXvV1egHaEK&w=333&h=187&c=8&rs=1&qlt=90&o=6&dpr=1.4&pid=3.1&rm=2);
+        height: 150px;
+        box-shadow: 0pc 2px 10px -1px black;
+      }
+      .header nav a img {
+        margin-top: 25px;
+      }
+      #navbarSupportedContent {
+        margin-top: 78px;
+      }
+      #navbarSupportedContent ul li a {
+        font-family: Georgia, "Times New Roman", Times, serif;
+        font-size: 20px;
+        padding: 10px;
+        margin-right: 4px;
+        transition: color 0.15s, border-bottom 0.15s;
+      }
+
+      #navbarSupportedContent ul li a:hover {
+        color: red;
+        border-bottom: 2px solid red;
+      }
+
+      /* header-end */
+      /* 
+      slider-start */
+
+      /* #silder {
+        overflow: hidden;
+      }
+
+      #slider figure {
+        width: 300%;
+        position: relative;
+        margin: 0;
+        left: 0;
+        animation: slider;
+        animation-duration: 15s;
+        animation-iteration-count: infinite;
+        animation-delay: 2s;
+      }
+
+      #slider figure img {
+        width: 33.33%;
+        float: left;
+        object-fit: contain;
+      }
+
+      #slider figure:hover {
+        animation-play-state: paused;
+      }
+
+      @keyframes slider {
+        0% {
+          left: 0;
+        }
+        25% {
+          left: 0;
+        }
+
+        50% {
+          left: -100%;
+        }
+        75% {
+          left: -100%;
+        }
+        100% {
+          left: 0;
+        }
+      } */
+
+      /* slider-end */
+
+      /* why cadd center -start */
+
+      .why-choose-us {
+        color: red;
+        font-family: "Times New Roman", Times, serif;
+        font-weight: bold;
+        font-size: 28px;
+        margin-left: 8px;
+      }
+
+      .contents {
+        width: 25%;
+        float: left;
+      }
+
+      .contents .box {
+        width: 300px;
+        height: 150px;
+        border: 1px solid red;
+        margin: 5px;
+        box-shadow: 2px 2px 10px black;
+        background-color: white;
+        transition: width 0.15s, height 0.15s;
+      }
+
+      .contents .box:hover {
+        width: 320px;
+        height: 155px;
+      }
+
+      .contents .box .img-content {
+        width: 100px;
+        height: 150px;
+        float: left;
+        display: inline-block;
+      }
+
+      .contents .box .img-content img {
+        margin-top: 20px;
+        margin-left: 2px;
+        width: 100px;
+        height: 100px;
+      }
+
+      .contents .box p {
+        color: red;
+        font-family: Georgia, "Times New Roman", Times, serif;
+        font-size: 18px;
+      }
+
+      @media screen and (max-width: 1225px) {
+        .contents {
+          width: 50%;
+        }
+      }
+      @media screen and (max-width: 625px) {
+        .contents {
+          width: 100%;
+        }
+      }
+      /* why cadd center end */
+
+      /* trending-course-start */
+      #row1 {
+        width: 100%;
+        position: static;
+        margin-bottom: 50px;
+      }
+      #row1 .cbox {
+        width: 33.33%;
+        position: static;
+      }
+
+      #row1 .cbox .card {
+        width: 300px;
+        height: 380px;
+        border: 2px solid white;
+        position: static;
+      }
+
+      #row1 .cbox .card img {
+        width: 297px;
+        height: 120px;
+        border-bottom: 2px solid red;
+        position: static;
+      }
+
+      #row1 .cbox .card img:hover {
+        opacity: 0.9;
+      }
+
+      #row1 .cbox .card .card-body .course-heading {
+        font-family: Georgia, "Times New Roman", Times, serif;
+        font-size: 18px;
+        font-weight: bold;
+      }
+
+      @media screen and (max-width: 920px) {
+        #row1 .cbox {
+          width: 100%;
+          margin-bottom: 10px;
+        }
+      }
+      /* trending-course-end */
+
+      /* joinus-start */
+      .head {
+        margin-top: 5%;
+        background-color: white;
+        padding: 20px;
+        -webkit-box-shadow: 10px 10px 41px 0px rgba(0, 0, 0, 0.45);
+        -moz-box-shadow: 10px 10px 41px 0px rgba(0, 0, 0, 0.45);
+        box-shadow: 10px 10px 41px 0px rgba(0, 0, 0, 0.45);
+      }
+
+      .head h1 {
+        font-family: "Times New Roman", Times, serif;
+        font-size: 26px;
+        color: red;
+      }
+
+      .head h4 {
+        text-align: center;
+        font-size: 20px;
+        font-family: Georgia, "Times New Roman", Times, serif;
+        font-weight: bold;
+      }
+
+      .head h5 {
+        text-align: center;
+        font-size: 18px;
+        font-family: Georgia, "Times New Roman", Times, serif;
+        font-weight: normal;
+      }
+
+      .inbody {
+        margin-left: 0;
+        padding-top: 4%;
+        padding-left: 2%;
+      }
+      .map {
+        padding-left: 5%;
+        padding-top: 3%;
+      }
+      .map img {
+        width: 350px;
+        height: 300px;
+        display: flex;
+        justify-content: center;
+      }
+      .inbody button {
+        border: 1px solid red;
+        border-radius: 5px;
+        transition: color 0.15s, background-color 0.15s;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 5px;
+        padding-right: 5px;
+        background-color: white;
+        color: red;
+      }
+
+      .inbody button a {
+        color: red;
+        text-decoration: none;
+      }
+
+      .inbody button:hover {
+        box-shadow: 2px 2px 10px black;
+      }
+      .inbody button:active {
+        box-shadow: 2px 2px 8px black;
+      }
+      /* joinus-end */
+
+      /* styling-location-start */
+
+      .location {
+        width: 100%;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-attachment: static;
+      }
+
+      .location .location-address {
+        width: 50%;
+        float: left;
+      }
+      .location .location-address h1 {
+        color: red;
+        letter-spacing: 3px;
+        text-align: center;
+        font-family: "Times New Roman", Times, serif;
+        font-size: 28px;
+        margin-top: 105px;
+      }
+
+      .location .location-address p {
+        font-family: Georgia, "Times New Roman", Times, serif;
+        font-size: 20px;
+        text-align: center;
+      }
+      .location .location-map {
+        width: 50%;
+        float: left;
+        display: flex;
+        justify-content: center;
+      }
+
+      @media screen and (max-width: 1280px) {
+        .location {
+          background-image: none;
+        }
+        .location .location-address {
+          width: 100%;
+        }
+        .location .location-map {
+          width: 100%;
+        }
+
+        .loaction .location-map iframe {
+          width: 450px;
+        }
+      }
+
+      /* styling-location-end */
+
+      /* footer-start */
+      #footer {
+        background-color: white;
+        border-top: 10px solid red;
+        width: 100%;
+      }
+
+      #footer .footer-content {
+        width: 100%;
+        margin-top: 12px;
+      }
+
+      #footer .footer-content .segment {
+        width: 25%;
+        float: left;
+      }
+
+      #footer .footer-content .segment img {
+        width: 200px;
+        height: 190px;
+      }
+
+      #footer .footer-content .segment h2 {
+        font-family: "Times New Roman", Times, serif;
+        font-size: 22px;
+        color: red;
+        margin-bottom: 8px;
+      }
+
+      #footer .footer-content .segment a {
+        color: black;
+        font-family: Georgia, "Times New Roman", Times, serif;
+        font-size: 20px;
+        text-decoration: none;
+        transition: color 0.15s;
+        display: block;
+      }
+
+      #footer .footer-content .segment a:hover {
+        color: red;
+      }
+
+      #footer .footer-content .segment a .img1 {
+        width: 40px;
+        height: 40px;
+        border-radius: 20px;
+        margin-bottom: 10px;
+      }
+
+      #footer .footer-content .segment a .img2 {
+        width: 55px;
+        height: 45px;
+        border-radius: 22.5px;
+        margin-bottom: 10px;
+      }
+
+      #footer .footer-content .segment a .img3 {
+        width: 250px;
+        height: 70px;
+      }
+
+      @media screen and (max-width: 900px) {
+        #footer .footer-content .segment {
+          width: 22.5%;
+        }
+      }
+
+      @media screen and (max-width: 750px) {
+        #footer .footer-content .segment {
+          width: 100%;
+        }
+      }
+      /* footer-end */
+
+      #navbarSupportedContent ul li .active {
+        color: red;
+        border-bottom: 2px solid red;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- header-start -->
+
+    <div class="container-fluid fixed-top" id="mhead">
+      <div class="header fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light container">
+          <a class="navbar-brand" href="#">
+            <img
+              src="https://caddcentre.com/assets/images/cadd_centre_logo.svg"
+              alt="Error"
+              loading="lazy"
+          /></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link active" href="#">Home </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Aboutus.html">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a href="Courses.html" class="nav-link">Courses</a>
+              </li>
+              <li class="nav-item">
+                <a href="gallery.html" class="nav-link">Gallery</a>
+              </li>
+              <li class="nav-item">
+                <a href="contact.html" class="nav-link">Contact us</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+
+    <!-- header-end -->
+
+    <br /><br />
+
+    <!-- slider-start -->
+    <!-- <div class="row">
+      <div id="slider">
+        <figure>
+          <img
+            src="https://caddcentre.com/assets/images/banner/job-fair-mumbai.webp"
+            alt=""
+          />
+          <img
+            src="https://caddcentre.com/assets/images/banner/1683542769_cool-webv.webp"
+            alt=""
+          />
+        </figure>
+      </div>
+    </div> -->
+    <!-- 
+    slider-end -->
+
+    <img
+      src="https://caddcentre.com/assets/images/banner/job-fair-mumbai.webp"
+      alt=""
+      style="width: 100%; height: 400px"
+    />
+
+    <br /><br /><br />
+
+    <!-- why choose us -start -->
+    <center><h1 class="why-choose-us">Why Cadd Center?</h1></center>
+    <br /><br />
+    <div class="container-fluid" id="why-choose-us-content">
+      <div class="row" style="width: 100%">
+        <div class="contents">
+          <center>
+            <div class="box">
+              <div class="img-content">
+                <img
+                  src="https://th.bing.com/th?id=OIP.JejFTHDchirDoAUdr0GKRQHaHC&w=256&h=243&c=8&rs=1&qlt=90&o=6&dpr=1.4&pid=3.1&rm=2"
+                  alt=""
+                />
+              </div>
+              <p style="margin-top: 30px; display: inline-block">
+                Over <br />31 years of <br />excellence
+              </p>
+            </div>
+          </center>
+        </div>
+        <div class="contents">
+          <center>
+            <div class="box">
+              <div class="img-content">
+                <img
+                  src="https://th.bing.com/th/id/OIP.nhzF31llZ0DDIOwMBWC6YgHaL2?w=131&h=210&c=7&r=0&o=5&dpr=1.4&pid=1.7"
+                  alt=""
+                />
+              </div>
+              <p style="margin-top: 20px">
+                Gobally Certified <br />
+                ISO 9001:2015 Certified <br />Quality Edhucation
+              </p>
+            </div>
+          </center>
+        </div>
+        <div class="contents">
+          <center>
+            <div class="box">
+              <div class="img-content">
+                <img
+                  src="https://th.bing.com/th/id/OIP.iU2T8UJ0srvS9PqnOofu5wAAAA?w=132&h=150&c=7&r=0&o=5&dpr=1.4&pid=1.7"
+                  alt=""
+                />
+              </div>
+              <p style="margin-top: 30px">
+                Instructors <br />
+                Certified by <br />ITA
+              </p>
+            </div>
+          </center>
+        </div>
+        <div class="contents">
+          <center>
+            <div class="box">
+              <div class="img-content">
+                <img
+                  src="https://tse1.mm.bing.net/th?id=OIP.BAa5if1sRBB6HN43i_MZoQHaHa&pid=ImgDet&w=180&h=180&c=7"
+                  alt=""
+                />
+              </div>
+              <p style="margin-top: 30px">
+                Life time support for <br />
+                old students <br />in clarifying doubts
+              </p>
+            </div>
+          </center>
+        </div>
+      </div>
+      <br /><br /><br />
+
+      <div class="row" style="width: 100%">
+        <div class="contents">
+          <center>
+            <div class="box">
+              <div class="img-content">
+                <img
+                  src="https://th.bing.com/th/id/OIP.WOeGhb0RlD8P0618_Ho7CQAAAA?w=151&h=168&c=7&r=0&o=5&dpr=1.4&pid=1.7"
+                  alt=""
+                />
+              </div>
+              <p style="margin-top: 30px; display: inline-block">
+                Start to end <br />Industry specified <br />skill
+              </p>
+            </div>
+          </center>
+        </div>
+        <div class="contents">
+          <center>
+            <div class="box">
+              <div class="img-content">
+                <img
+                  src="https://th.bing.com/th/id/OIP.g4ll9fpSjRTEkswa8MV8wQHaFO?w=255&h=180&c=7&r=0&o=5&dpr=1.4&pid=1.7"
+                  alt=""
+                />
+              </div>
+              <p style="margin-top: 40px">
+                World<br />
+                class courseware
+              </p>
+            </div>
+          </center>
+        </div>
+        <div class="contents">
+          <center>
+            <div class="box">
+              <div class="img-content">
+                <img
+                  src="https://th.bing.com/th/id/OIP.LcIGiJKcvcyGNh57APyBYAHaEf?w=301&h=182&c=7&r=0&o=5&dpr=1.4&pid=1.7"
+                  alt=""
+                />
+              </div>
+              <p style="margin-top: 35px">
+                Internationally <br />
+                recognised certificate
+              </p>
+            </div>
+          </center>
+        </div>
+        <div class="contents">
+          <center>
+            <div class="box">
+              <div class="img-content">
+                <img
+                  src="https://tse1.mm.bing.net/th?id=OIP.rm7rHp00ECMldl-Lfe9zeQAAAA&pid=ImgDet&rs=1"
+                  alt=""
+                />
+              </div>
+              <p style="margin-top: 30px">
+                NSDC <br />
+                approved training <br />partner
+              </p>
+            </div>
+          </center>
+        </div>
+      </div>
+    </div>
+    <!-- why choose us end -->
+
+    <br /><br /><br />
+
+    <!-- trending-courses-start -->
+    <center>
+      <h1
+        style="
+          font-family: 'Times New Roman', Times, serif;
+          font-size: 28px;
+          letter-spacing: 8px;
+          color: red;
+          font-style: normal;
+        "
+      >
+        TRENDING COURSES
+      </h1>
+    </center>
+    <br /><br />
+
+    <div
+      class="container-fluid"
+      style="
+        background-color: rgb(241, 22, 40);
+        padding-top: 50px;
+        padding-bottom: 10px;
+      "
+    >
+      <div class="row" id="row1">
+        <div class="cbox" id="">
+          <center>
+            <div class="card">
+              <img
+                src="https://th.bing.com/th/id/OIP.eaG6NK1yFVqjt8Vlqn1j-QAAAA?w=313&h=176&c=7&r=0&o=5&dpr=1.4&pid=1.7"
+                alt=""
+              />
+
+              <div class="card-body">
+                <p class="course-heading">
+                  Proficient in python <br />
+                  for professionals
+                </p>
+
+                <p style="color: red">
+                  Project based assessment | <br />
+                  World-class coursewre | industry recognised certificate
+                  <br />| Placement Support |
+                </p>
+              </div>
+            </div>
+          </center>
+        </div>
+        <div class="cbox">
+          <center>
+            <div class="card">
+              <img
+                src="https://th.bing.com/th/id/OIP.Ie9AA9XecgsHuYAyMnzKlgHaE7?w=257&h=180&c=7&r=0&o=5&dpr=1.4&pid=1.7"
+                alt=""
+              />
+
+              <div class="card-body">
+                <p class="course-heading">
+                  Expert Certificate in <br />
+                  Product design
+                </p>
+
+                <p style="color: red">
+                  Project based assessment | <br />
+                  World-class coursewre | industry recognised certificate
+                  <br />| Placement Support |
+                </p>
+              </div>
+            </div>
+          </center>
+        </div>
+        <div class="cbox">
+          <center>
+            <div class="card">
+              <img
+                src="https://th.bing.com/th/id/OIP.hSH1QmBMyhBq9eTbL1JG-QHaE8?w=248&h=180&c=7&r=0&o=5&dpr=1.4&pid=1.7"
+                alt=""
+              />
+
+              <div class="card-body">
+                <p class="course-heading">
+                  Expert Certificate in <br />
+                  Interior design
+                </p>
+
+                <p style="color: red">
+                  Project based assessment | <br />
+                  World-class coursewre | industry recognised certificate
+                  <br />| Placement Support |
+                </p>
+              </div>
+            </div>
+          </center>
+        </div>
+      </div>
+
+      <div class="row" id="row1">
+        <div class="cbox" id="">
+          <center>
+            <div class="card">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8R_HZGHA03BH6Nx8Z2FqTcu_p7gTy3fg04v64QEBVLvRsw_GyIZBJ_qoOKiOm9N8OIaU"
+                alt=""
+              />
+
+              <div class="card-body">
+                <p class="course-heading">
+                  Master Certificate in <br />
+                  MEP Design
+                </p>
+
+                <p style="color: red">
+                  Project based assessment | <br />
+                  World-class coursewre | industry recognised certificate
+                  <br />| Placement Support |
+                </p>
+              </div>
+            </div>
+          </center>
+        </div>
+        <div class="cbox">
+          <center>
+            <div class="card">
+              <img
+                src="https://marketing.caddcentre.com/uploads/thumbnails/1679554080_Expert-Certificate-in-Architectural-Design.jpg"
+                alt=""
+              />
+
+              <div class="card-body">
+                <p class="course-heading">
+                  Master Certificate in <br />
+                  Building design
+                </p>
+
+                <p style="color: red">
+                  Project based assessment | <br />
+                  World-class coursewre | industry recognised certificate
+                  <br />| Placement Support |
+                </p>
+              </div>
+            </div>
+          </center>
+        </div>
+        <div class="cbox">
+          <center>
+            <div class="card">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxO76Sc4mfOB66zhyNaa3VlggNNZAGXFpO4g2LLhxGIowGOGeBvVC7y-L_-5nD8YdeJ5I"
+                alt=""
+              />
+
+              <div class="card-body">
+                <p class="course-heading">
+                  Master Certificate in <br />
+                  Architectural design
+                </p>
+
+                <p style="color: red">
+                  Project based assessment | <br />
+                  World-class coursewre | industry recognised certificate
+                  <br />| Placement Support |
+                </p>
+              </div>
+            </div>
+          </center>
+        </div>
+      </div>
+    </div>
+    <!-- trending-courses-end -->
+
+    <!-- joinus-start -->
+    <div class="container head" style="position: static">
+      <div class="row" style="position: static">
+        <div
+          class="container-fluid inbody col-xl-6 col-lg-6 col-md-6 col-sm-12"
+          style="position: static"
+        >
+          <h1 class="text-center">BECOME A PART OF OUR TEAM...</h1>
+          <h4>
+            "Discover your true potential. Join us and embark on a fulfilling
+            career journey filled with endless opportunities."
+          </h4>
+          <h5>The best way to predict the future is to create it.</h5>
+          <h5>
+            Unlock your potential! Join our company and unleash your talent in
+            an environment that fosters growth.
+          </h5>
+          <br />
+          <center>
+            <button>
+              <a href="job_form.html">Click to apply</a>
+            </button>
+          </center>
+        </div>
+        <div class="container-fluid col-xl-1 col-lg-1 col-md-1 col-sm-12"></div>
+        <div
+          class="container-fluid map col-xl-5 col-lg-5 col-md-5 col-sm-12"
+          style="position: static"
+        >
+          <center>
+            <img
+              class="img-fluid"
+              src="https://th.bing.com/th/id/OIP.9sv1oX8RAAz2RxaIKHTPswHaFr?w=235&h=180&c=7&r=0&o=5&dpr=1.4&pid=1.7"
+            />
+          </center>
+        </div>
+      </div>
+    </div>
+    <!-- joinus-end -->
+
+    <br /><br /><br />
+
+    <!-- address-start -->
+    <div class="container-fluid">
+      <div class="row">
+        <div class="location">
+          <div class="location-address">
+            <h1>LOCATE US</h1>
+            <br />
+            <p style="font-weight: bold">
+              65/1 38, Valmiki St, above students xerox, <br />
+              near Bus Terminus, Kamaraj Nagar,<br />
+              Thiruvanmiyur, Chennai, Tamil Nadu <br />
+              600041
+            </p>
+          </div>
+          <div class="location-map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.7596961495674!2d80.
+            25746707494373!3d12.987215887329553!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5
+            25d59329e0e57%3A0x4748c70df59d67d6!2sCADD%20CENTRE%20-%20Thiruvanmiyur!5e0!3m2!1sen!2sin!4v
+            1687702985964!5m2!1sen!2sin"
+              width="500"
+              height="450"
+              style="border: 1px solid red"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- address-end -->
+
+    <br /><br /><br />
+
+    <!--footer-start-->
+    <div id="footer" class="row">
+      <br /><br />
+      <div class="footer-content">
+        <div class="segment">
+          <center>
+            <img
+              src="https://caddcentre.com/assets/images/cadd_centre_logo.svg"
+              alt=""
+            />
+          </center>
+        </div>
+        <div class="segment">
+          <center><h2>Quick links</h2></center>
+
+          <center>
+            <a href="">Home</a>
+
+            <a href="">About Us</a>
+
+            <a href="">Courses</a>
+
+            <a href="">Gallery</a>
+          </center>
+        </div>
+        <div class="segment">
+          <center>
+            <h2>Contact Us</h2>
+
+            <a
+              href="mailto:santhimarappan@gmail.com"
+              target="_blank"
+              style="display: inline; margin-right: 8px"
+              ><img
+                src="https://th.bing.com/th/id/OIP.khT6zLB_Tf7J3ojLpX_GyAHaHa?w=186&h=186&c=7&r=0&o=5&dpr=1.4&pid=1.7"
+                alt=""
+                class="img1"
+            /></a>
+
+            <a
+              href="https://wa.me/19500126141"
+              target="_blank"
+              style="display: inline"
+            >
+              <img
+                src="https://th.bing.com/th/id/OIP.VKMedD_riSyt-mwW1jooHgHaGE?w=253&h=207&c=7&r=0&o=5&dpr=1.4&pid=1.7"
+                alt=""
+                class="img2"
+              />
+            </a>
+          </center>
+        </div>
+        <div class="segment">
+          <center>
+            <a
+              href="https://play.google.com/store/apps/details?id=com.caddcentre.lms"
+              ><img
+                src="https://th.bing.com/th/id/OIP.EbZmoKK49Eai9NUp6JMJvwHaB2?w=338&h=87&c=7&r=0&o=5&dpr=1.4&pid=1.7"
+                alt=""
+                class="img3"
+            /></a>
+            <br />
+            <br />
+            <h2 style="margin-right: 50px">Phn no-</h2>
+
+            <p>+91 95001 26141</p>
+          </center>
+        </div>
+      </div>
+    </div>
+
+    <center>
+      <p
+        style="
+          color: white;
+          font-family: 'Times New Roman', Times, serif;
+          font-size: 22px;
+          background-color: red;
+          text-align: center;
+          height: 60px;
+          padding: 12px;
+        "
+      >
+        Our Main website-
+        <a href="https://caddcentre.com/" style="text-align: center"
+          >https://caddcentre.com/</a
+        >
+      </p>
+    </center>
+    <!--footer end-->
+  </body>
+</html>

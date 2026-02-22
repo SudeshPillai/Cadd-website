@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="icon" href="https://registry.caddcentre.com/old/images/cadd_logo.png?v1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" rel="stylesheet">
+    <script
+      type="text/javascript"
+      src="http://cdn.saldev.nl/js/jquery/jquery-3.1.1.min.js"
+    ></script>
+    <script type="text/javascript" src="klassenlijst.js"></script>
+    <script type="text/javascript" src="hamburger.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+    />
+ 
+    <style>
+        * {
+          box-sizing: border-box;
+          padding: 0%;
+          margin: 0%;
+        }
+  
+        .header {
+          background-image: url(https://th.bing.com/th?id=OIP.TkMdBQkONimKZiJFXvV1egHaEK&w=333&h=187&c=8&rs=1&qlt=90&o=6&dpr=1.4&pid=3.1&rm=2);
+          height: 150px;
+          box-shadow: 0px 2px 10px black;
+        }
+        .header nav a img {
+          margin-top: 25px;
+        }
+        #navbarSupportedContent {
+          margin-top: 78px;
+        }
+        #navbarSupportedContent ul li a {
+          font-family: Georgia, "Times New Roman", Times, serif;
+          font-size: 20px;
+          padding: 10px;
+          margin-right: 4px;
+          transition: color 0.15s, border-bottom 0.15s;
+        }
+  
+        #navbarSupportedContent ul li a:hover {
+          color: red;
+          border-bottom: 2px solid red;
+        }
+  
+        #footer {
+        background-color: white;
+        border-top: 10px solid red;
+        width: 100%;
+      }
+
+      #footer .footer-content {
+        width: 100%;
+        margin-top: 12px;
+      }
+
+      #footer .footer-content .segment {
+        width: 25%;
+        float: left;
+      }
+
+      #footer .footer-content .segment img {
+        width: 200px;
+        height: 190px;
+      }
+
+      #footer .footer-content .segment h2 {
+        font-family: "Times New Roman", Times, serif;
+        font-size: 22px;
+        color: red;
+        margin-bottom: 8px;
+      }
+
+      #footer .footer-content .segment a {
+        color: black;
+        font-family: Georgia, "Times New Roman", Times, serif;
+        font-size: 20px;
+        text-decoration: none;
+        transition: color 0.15s;
+        display: block;
+      }
+
+      #footer .footer-content .segment a:hover {
+        color: red;
+      }
+
+      #footer .footer-content .segment a .img1 {
+        width: 40px;
+        height: 40px;
+        border-radius: 20px;
+        margin-bottom: 10px;
+      }
+
+      #footer .footer-content .segment a .img2 {
+        width: 55px;
+        height: 45px;
+        border-radius: 22.5px;
+        margin-bottom: 10px;
+      }
+
+      #footer .footer-content .segment a .img3 {
+        width: 250px;
+        height: 70px;
+      }
+
+      @media screen and (max-width: 900px) {
+        #footer .footer-content .segment {
+          width: 22.5%;
+        }
+      }
+
+      @media screen and (max-width: 750px) {
+        #footer .footer-content .segment {
+          width: 100%;
+        }
+      }
+
+        @media(max-width:760px){
+            iframe{
+                display: none;
+            }
+        }
+
+        .jumbotron,.btn-danger{
+            background-color: red;
+            color: white;
+        }
+
+        .btn{
+        color: red;
+        background-color: white;
+        border-color:rgb(240, 180, 180);
+        border-width: 5px;
+        font-size: 24px;
+        /*font-family: Georgia, 'Times New Roman', Times, serif;*/
+
+      }
+      .btn:hover{
+        border-color:white;
+        color: white;
+        background-color: red;
+        border-width: 5px;
+      }
+
+      #navbarSupportedContent ul li .active {
+        color: red;
+        border-bottom: 2px solid red;
+      }
+    </style>    
+</head>
+<body>
+    
+    <div class="header fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light container">
+          <a class="navbar-brand" href="#">
+            <img
+              src="https://caddcentre.com/assets/images/cadd_centre_logo.svg"
+              alt="Error"
+              loading="lazy"
+          /></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+  
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="caddcenterhome.html">Home </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Aboutus.html">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a href="Courses.html" class="nav-link">Courses</a>
+              </li>
+              <li class="nav-item">
+                <a href="gallery.html" class="nav-link">Gallery</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link active">Contact us</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+    </div>
+
+    <br><br><br><br><br><br><br>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div style="background-color: lightgray;padding: 100px;" class="col-xl-6 col-lg-6 col-md-12">
+                <p style="font-size: 28px; font-family: garamond;font-weight: bold;">Contact Us</p>
+                <p style="font-size: 24px; font-family: Georgia, 'Times New Roman', Times, serif;">We are always here for you- whether it’s feedback, assistance or you just want to know more about us. Please feel free to reach out to us!</p>
+            </div>
+            <div style="background-color: lightgray;" class="col-xl-6 col-lg-6 col-md-12">
+                <img style="width:100%;" src="https://indiacsr.in/wp-content/uploads/2023/06/Tips-to-Improve-Your-Small-Businesss-Customer-Service-Experience-1.jpg" alt="">
+            </div>
+        </di>
+    </div><br>
+
+    <center><p style="font-size: 20px; font-family: Georgia, 'Times New Roman', Times, serif;color: red;font-weight: bold;">We would love to connect with you! <br> Reach out to us for more information.</p></center>
+    <br><br>
+    <div class="row">
+        <div class="col-xl-1 col-lg-1 col-md-1"></div>
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sl-0">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.7596961495665!2d80.25746707496855!3d12.987215887329604!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525d59329e0e57%3A0x4748c70df59d67d6!2sCADD%20CENTRE%20-%20Thiruvanmiyur!5e0!3m2!1sen!2sin!4v1688309341525!5m2!1sen!2sin" width="100%" height="450" style="border:1px solid;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="col-xl-1 col-lg-1 col-md-1"></div>
+        <div class="col-xl-3 col-lg-3 col-md-3  jumbotron ">
+            <form style="width: 100%;" action=""> 
+                <div class="form-group">
+                    <center><h3>LET'S GET IN TOUCH</h3></center>
+                    <input class="form-control my-3 text-secondary" type="text" placeholder="Name" name="Name">
+                    <input class="form-control my-3 text-secondary" type="tel" placeholder="Mobile" name="mobile">
+                    <input class="form-control my-3 text-secondary" type="email" placeholder="Email" name="email">
+                    <textarea class="form-control my-3 text-secondary" name="Message" rows="5" placeholder="Message"></textarea>
+                    <div class="text-center">
+                        <button class="btn">SUBMIT</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="col-xl-1 col-lg-1 col-md-1"></div>
+    </div>
+
+    <div>
+        <h2 style="font-family: garamond;padding-left: 100px;">Office</h2>
+        <p style="font-size: 20px;padding-left:100px;"><img style="width:50px;" src="https://img.freepik.com/premium-vector/pin-point-icon-with-red-map-location-pointer-symbol-isolated-white-background_120819-234.jpg" alt="">
+            65/1 38, Valmiki St, above students xerox, near Bus Terminus, Kamaraj Nagar, Thiruvanmiyur, Chennai, Tamil Nadu 600041</p>
+        
+        <p style="font-size: 20px;padding-left:100px;"><img style="width:50px;" src="data:image/png;base64,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" alt="">
+            santhimarappan@gmail.com <santhimarappan@gmail.com></p>
+    </div>
+
+    <div id="footer" class="row">
+      <br /><br />
+      <div class="footer-content">
+        <div class="segment">
+          <center>
+            <img
+              src="https://caddcentre.com/assets/images/cadd_centre_logo.svg"
+              alt=""
+            />
+          </center>
+        </div>
+        <div class="segment">
+          <center><h2>Quick links</h2></center>
+
+          <center>
+            <a href="">Home</a>
+
+            <a href="">About Us</a>
+
+            <a href="">Courses</a>
+
+            <a href="">Gallery</a>
+          </center>
+        </div>
+        <div class="segment">
+          <center>
+            <h2>Contact Us</h2>
+
+            <a
+              href="mailto:santhimarappan@gmail.com"
+              target="_blank"
+              style="display: inline; margin-right: 8px"
+              ><img
+                src="https://th.bing.com/th/id/OIP.khT6zLB_Tf7J3ojLpX_GyAHaHa?w=186&h=186&c=7&r=0&o=5&dpr=1.4&pid=1.7"
+                alt=""
+                class="img1"
+            /></a>
+
+            <a
+              href="https://wa.me/19500126141"
+              target="_blank"
+              style="display: inline"
+            >
+              <img
+                src="https://th.bing.com/th/id/OIP.VKMedD_riSyt-mwW1jooHgHaGE?w=253&h=207&c=7&r=0&o=5&dpr=1.4&pid=1.7"
+                alt=""
+                class="img2"
+              />
+            </a>
+          </center>
+        </div>
+        <div class="segment">
+          <center>
+            <a
+              href="https://play.google.com/store/apps/details?id=com.caddcentre.lms"
+              ><img
+                src="https://th.bing.com/th/id/OIP.EbZmoKK49Eai9NUp6JMJvwHaB2?w=338&h=87&c=7&r=0&o=5&dpr=1.4&pid=1.7"
+                alt=""
+                class="img3"
+            /></a>
+            <br />
+            <br />
+            <h2 style="margin-right: 50px">Phn no-</h2>
+
+            <p>+91 95001 26141</p>
+          </center>
+        </div>
+      </div>
+    </div>
+
+    <center>
+      <p
+        style="
+          color: white;
+          font-family: 'Times New Roman', Times, serif;
+          font-size: 22px;
+          background-color: red;
+          text-align: center;
+          height: 60px;
+          padding: 12px;
+        "
+      >
+        Our Main website-
+        <a href="https://caddcentre.com/" style="text-align: center"
+          >https://caddcentre.com/</a
+        >
+      </p>
+    </center>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .slider {
+        width: 800px;
+        height: 500px;
+        overflow: hidden;
+        border-radius: 10px;
+      }
+
+      .slides {
+        width: 400%;
+        height: 500px;
+        display: flex;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slider">
+      <div class="slides">
+        <input type="radio" name="radio-btn" id="radio1" />
+        <input type="radio" name="radio-btn" id="radio2" />
+        <input type="radio" name="radio-btn" id="radio3" />
+        <div class="slide">
+          <img
+            src="https://th.bing.com/th/id/OIP.9xKBE3vQ5okpDcfs37LFIwHaCx?w=297&h=131&c=7&r=0&o=5&dpr=1.4&pid=1.7"
+            alt=""
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="https://th.bing.com/th/id/OIP.t723wQmHQB0azHKhKpxvQwHaC9?w=294&h=139&c=7&r=0&o=5&dpr=1.4&pid=1.7"
+            alt=""
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="https://th.bing.com/th/id/OIP.yjB49eTSc231lXMV2OQ7nQHaEC?w=336&h=183&c=7&r=0&o=5&dpr=1.4&pid=1.7"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+    <div>
+      <label for="radio1"></label>
+      <label for="radio2"></label>
+      <label for="radio3"></label>
+    </div>
+  </body>
+</html>

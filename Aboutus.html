@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us</title>
+
+    <link
+      rel="icon"
+      href="https://caddcentre.com/assets/images/cadd_centre_logo.svg"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+    />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <script
+      type="text/javascript"
+      src="http://cdn.saldev.nl/js/jquery/jquery-3.1.1.min.js"
+    ></script>
+    <script type="text/javascript" src="klassenlijst.js"></script>
+    <script type="text/javascript" src="hamburger.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+        padding: 0%;
+        margin: 0%;
+      }
+
+      /* header-start */
+
+      #mhead {
+        background-image: url(https://th.bing.com/th?id=OIP.TkMdBQkONimKZiJFXvV1egHaEK&w=333&h=187&c=8&rs=1&qlt=90&o=6&dpr=1.4&pid=3.1&rm=2);
+        height: 150px;
+        width: 100%;
+        padding: 0%;
+        position: sticky;
+        top: 0%;
+      }
+
+      .header {
+        background-image: url(https://th.bing.com/th?id=OIP.TkMdBQkONimKZiJFXvV1egHaEK&w=333&h=187&c=8&rs=1&qlt=90&o=6&dpr=1.4&pid=3.1&rm=2);
+        height: 150px;
+        box-shadow: 0pc 2px 10px -1px black;
+      }
+
+      .header nav a img {
+        margin-top: 25px;
+      }
+      #navbarSupportedContent {
+        margin-top: 78px;
+      }
+      #navbarSupportedContent ul li a {
+        font-family: Georgia, "Times New Roman", Times, serif;
+        font-size: 20px;
+        padding: 10px;
+        margin-right: 4px;
+        transition: color 0.15s, border-bottom 0.15s;
+      }
+
+      #navbarSupportedContent ul li a:hover {
+        color: red;
+        border-bottom: 2px solid red;
+      }
+
+      /* header-end */
+
+      .aboutusbimg img {
+        /* background-image: url("Aboutusimg.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover; */
+        width: 100%;
+        height: 450px;
+        position: fixed;
+      }
+
+      .content {
+        background-color: white;
+        position: relative;
+        top: 490px;
+      }
+
+      .content div .c {
+        width: 50%;
+        float: left;
+      }
+
+      .content div .c h2 {
+        font-family: "Times New Roman", Times, serif;
+        color: red;
+        font-size: 22px;
+        padding: 20px;
+      }
+
+      .content div .c p {
+        font-family: Georgia, "Times New Roman", Times, serif;
+        color: black;
+        font-size: 18px;
+        padding: 20px;
+      }
+
+      .content .CPD h2 {
+        font-family: "Times New Roman", Times, serif;
+        color: red;
+        font-size: 22px;
+      }
+
+      .content .CPD {
+        background-color: white;
+        border-radius: 8px;
+        border: 1px solid red;
+        box-shadow: 1px 1px 12px rgb(247, 11, 11);
+        width: 90%;
+      }
+
+      .content .CPD p {
+        font-family: Georgia, "Times New Roman", Times, serif;
+        color: black;
+        font-size: 18px;
+      }
+
+      .content .random-pics {
+        width: 100%;
+        background-color: red;
+      }
+
+      .content .random-pics #row {
+        width: 100%;
+      }
+
+      .content .random-pics #row div {
+        width: 33.3333%;
+      }
+
+      .content .random-pics #row div img {
+        width: 300px;
+        height: 200px;
+        border: 1px solid white;
+      }
+
+      .content .why-cadd-center-grp h2 {
+        font-family: "Times New Roman", Times, serif;
+        color: red;
+        font-size: 22px;
+        padding-left: 40px;
+      }
+
+      .content .why-cadd-center-grp p {
+        font-family: Georgia, "Times New Roman", Times, serif;
+        color: black;
+        font-size: 18px;
+        padding-left: 40px;
+      }
+
+      /* footer-start */
+      #footer {
+        background-color: white;
+        border-top: 10px solid red;
+        width: 100%;
+      }
+
+      #footer .footer-content {
+        width: 100%;
+        margin-top: 12px;
+      }
+
+      #footer .footer-content .segment {
+        width: 25%;
+        float: left;
+      }
+
+      #footer .footer-content .segment img {
+        width: 200px;
+        height: 190px;
+      }
+
+      #footer .footer-content .segment h2 {
+        font-family: "Times New Roman", Times, serif;
+        font-size: 22px;
+        color: red;
+        margin-bottom: 8px;
+      }
+
+      #footer .footer-content .segment a {
+        color: black;
+        font-family: Georgia, "Times New Roman", Times, serif;
+        font-size: 20px;
+        text-decoration: none;
+        transition: color 0.15s;
+        display: block;
+      }
+
+      #footer .footer-content .segment a:hover {
+        color: red;
+      }
+
+      #footer .footer-content .segment a .img1 {
+        width: 40px;
+        height: 40px;
+        border-radius: 20px;
+        margin-bottom: 10px;
+      }
+
+      #footer .footer-content .segment a .img2 {
+        width: 55px;
+        height: 45px;
+        border-radius: 22.5px;
+        margin-bottom: 10px;
+      }
+
+      #footer .footer-content .segment a .img3 {
+        width: 250px;
+        height: 70px;
+      }
+
+      @media screen and (max-width: 900px) {
+        #footer .footer-content .segment {
+          width: 22.5%;
+        }
+      }
+
+      @media screen and (max-width: 750px) {
+        #footer .footer-content .segment {
+          width: 100%;
+        }
+      }
+      /* footer-end */
+
+      @media screen and (max-width: 1075px) {
+        .content div .c {
+          width: 100%;
+        }
+
+        .content .random-pics #row div {
+          width: 100%;
+        }
+      }
+
+      #navbarSupportedContent ul li .active {
+        border-bottom: 2px solid red;
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- header-start -->
+
+    <div class="container-fluid fixed-top" id="mhead">
+      <div class="header">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light container">
+          <a class="navbar-brand" href="#">
+            <img
+              src="https://caddcentre.com/assets/images/cadd_centre_logo.svg"
+              alt="Error"
+              loading="lazy"
+          /></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="caddcenterhome.html">Home </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a href="Courses.html" class="nav-link">Courses</a>
+              </li>
+              <li class="nav-item">
+                <a href="gallery.html" class="nav-link">Gallery</a>
+              </li>
+              <li class="nav-item">
+                <a href="contact.html" class="nav-link">Contact us</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+
+    <!-- header-end -->
+    <br /><br />
+
+    <div class="aboutusbimg">
+      <img src="Aboutusimg.jpg" alt="" />
+    </div>
+
+    <div class="content">
+      <div style="width: 100%">
+        <div class="c">
+          <h2>About Us</h2>
+          <p>
+            CADD Centre Group is a global network of diversified skill
+            development centers. We are a technical workforce development
+            enterprise. CADD Centre Training services is the training division
+            of CADD Centre Group.
+          </p>
+        </div>
+        <div class="c">
+          <h2>We beleive in</h2>
+          <p>
+            At CADD Centre Group, we think that everyone ought to have the
+            chance to contribute to technological development and cultivate
+            future abilities. With learning pathways and courses produced by
+            industry professionals, we assist enterprises and people in
+            benchmarking skills across jobs and developing safe, dependable
+            products.
+          </p>
+        </div>
+      </div>
+      <br /><br />
+      <div class="row">
+        <center>
+          <div class="CPD">
+            <br />
+            <h2>Curriculum & Product Development</h2>
+            <p>
+              At CADD Centre, we provide standard 500 courses curated by the CPD
+              (Curriculum & Product Development) team. It includes practical
+              projects and helps with illustrations to better understand
+              real-world usage. These experts have hours of instructional
+              expertise; courseware is of world-class quality and is best rated
+              by customers worldwide in the engineering design space.
+            </p>
+            <br />
+          </div>
+        </center>
+      </div>
+
+      <br /><br />
+
+      <div class="random-pics">
+        <div class="row" id="row">
+          <br />
+          <div>
+            <br />
+            <center>
+              <img
+                src="https://lscdn.azureedge.net/biz-live/img/11230663-11230663-390e71ab.jpeg"
+                alt=""
+              />
+            </center>
+            <br />
+          </div>
+          <div>
+            <br />
+            <center>
+              <img
+                src="https://lscdn.azureedge.net/biz-live/img/11230663-11230663-5142564.jpeg"
+                alt=""
+              />
+            </center>
+            <br />
+          </div>
+          <div>
+            <br />
+            <center>
+              <img
+                src="https://lscdn.azureedge.net/biz-live/img/11230663-11230663-72e91f4b.jpeg"
+                alt=""
+              />
+            </center>
+            <br />
+          </div>
+        </div>
+      </div>
+      <br />
+      <div class="row" style="background-color: white">
+        <br />
+        <h2
+          style="
+            font-family: 'Times New Roman', Times, serif;
+            color: red;
+            font-size: 22px;
+            padding-left: 40px;
+          "
+        >
+          What Does CADD Centre Group Stance For?
+        </h2>
+        <br />
+        <p
+          style="
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color: black;
+            font-size: 18px;
+            padding-left: 40px;
+          "
+        >
+          We want to establish a worldwide community of students and teachers in
+          which learning is continuous. We want to match our users with the
+          appropriate course. We give them training and placement depending on
+          their career goals, the profile, the course's industrial use,
+          certification, cost, etc. CADD Centre offers CAD/ CAE/project
+          management/ IT/industrial design/ Interior design / Fashion Design/
+          Business skills. <br />
+          We are continually expanding and adding new regularly online and
+          offline. In the future, we want to enhance and broaden our horizons to
+          assist our students in advancing their careers and professional
+          objectives.
+        </p>
+      </div>
+      <!--footer-start-->
+      <div id="footer" class="row">
+        <br /><br />
+        <div class="footer-content">
+          <div class="segment">
+            <center>
+              <img
+                src="https://caddcentre.com/assets/images/cadd_centre_logo.svg"
+                alt=""
+              />
+            </center>
+          </div>
+          <div class="segment">
+            <center><h2>Quick links</h2></center>
+
+            <center>
+              <a href="">Home</a>
+
+              <a href="">About Us</a>
+
+              <a href="">Courses</a>
+
+              <a href="">Gallery</a>
+            </center>
+          </div>
+          <div class="segment">
+            <center>
+              <h2>Contact Us</h2>
+
+              <a
+                href="mailto:santhimarappan@gmail.com"
+                target="_blank"
+                style="display: inline; margin-right: 8px"
+                ><img
+                  src="https://th.bing.com/th/id/OIP.khT6zLB_Tf7J3ojLpX_GyAHaHa?w=186&h=186&c=7&r=0&o=5&dpr=1.4&pid=1.7"
+                  alt=""
+                  class="img1"
+              /></a>
+
+              <a
+                href="https://wa.me/19500126141"
+                target="_blank"
+                style="display: inline"
+              >
+                <img
+                  src="https://th.bing.com/th/id/OIP.VKMedD_riSyt-mwW1jooHgHaGE?w=253&h=207&c=7&r=0&o=5&dpr=1.4&pid=1.7"
+                  alt=""
+                  class="img2"
+                />
+              </a>
+            </center>
+          </div>
+          <div class="segment">
+            <center>
+              <a
+                href="https://play.google.com/store/apps/details?id=com.caddcentre.lms"
+                ><img
+                  src="https://th.bing.com/th/id/OIP.EbZmoKK49Eai9NUp6JMJvwHaB2?w=338&h=87&c=7&r=0&o=5&dpr=1.4&pid=1.7"
+                  alt=""
+                  class="img3"
+              /></a>
+              <br />
+              <br />
+              <h2 style="margin-right: 50px">Phn no-</h2>
+
+              <p>+91 95001 26141</p>
+            </center>
+          </div>
+        </div>
+      </div>
+
+      <center>
+        <p
+          style="
+            color: white;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 22px;
+            background-color: red;
+            text-align: center;
+            height: 60px;
+            padding: 12px;
+          "
+        >
+          Our Main website-
+          <a href="https://caddcentre.com/" style="text-align: center"
+            >https://caddcentre.com/</a
+          >
+        </p>
+      </center>
+      <!--footer end-->
+    </div>
+  </body>
+</html>
